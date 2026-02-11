@@ -78,7 +78,7 @@ p {
 }
 
 .section--soft {
-  background-color: var(--bg-soft);
+  background-color: var(--bg-main);
 }
 
 .section--accent {
@@ -137,6 +137,7 @@ p {
 
 .btn-primary:hover {
   background-color: var(--color-accent);
+  color: var(--text-inverse);
 }
 
 /* =========================
@@ -175,7 +176,9 @@ p {
   perspective: 1400px;
   opacity: 1;
   backdrop-filter: blur(0px);
-  transition: opacity 1.6s ease, backdrop-filter 1.6s ease;
+  transition:
+    opacity 1.6s ease,
+    backdrop-filter 1.6s ease;
 }
 
 .envelope-overlay.fade-out {
@@ -224,7 +227,8 @@ p {
   perspective: 1000px;
   overflow: hidden;
 
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.7),
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
     0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
@@ -233,7 +237,8 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       45deg,
       transparent 48.8%,
       rgba(0, 0, 0, 0.08) 50%,
@@ -297,7 +302,8 @@ p {
   transform-origin: top center;
   z-index: 4;
 
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.6),
+  box-shadow:
+    inset 0 -1px 0 rgba(255, 255, 255, 0.6),
     inset 0 -12px 18px rgba(0, 0, 0, 0.06);
 }
 
@@ -344,7 +350,10 @@ p {
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28))
     drop-shadow(0 2px 4px rgba(255, 255, 255, 0.35));
 
-  transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    filter 0.35s ease;
 }
 
 /* latido */

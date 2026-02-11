@@ -76,16 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (presentationTitle)
         presentationTitle.innerHTML = data.presentation?.title || "";
 
-      if (presentationParents && data.presentation?.parents) {
-        presentationParents.innerHTML = "";
-        data.presentation.parents.forEach((group) => {
-          presentationParents.innerHTML += `
-            <p class="parents-names">${group.names.join("<br>")}</p>
-            <p class="parents-note">(${group.note})</p>
-          `;
-        });
-      }
-
       if (presentationText)
         presentationText.innerHTML = data.presentation?.text || "";
 
@@ -112,13 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Papás
       renderPresentationGroup(
         "presentationParents",
-        data.presentation?.parents
+        data.presentation?.parents,
       );
 
       // Padrinos
       renderPresentationGroup(
         "presentationPadrinos",
-        data.presentation?.padrinos
+        data.presentation?.padrinos,
       );
 
       /* =====================================================
@@ -166,17 +156,19 @@ document.addEventListener("DOMContentLoaded", () => {
           timelineContainer.innerHTML += `
             <div class="timeline-row ${i % 2 ? "is-flip" : ""}">
               <div class="timeline-side timeline-side--left">
-                ${i % 2 === 0
-              ? `<img class="timeline-icon" src="${item.icon}">`
-              : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
-            }
+                ${
+                  i % 2 === 0
+                    ? `<img class="timeline-icon" src="${item.icon}">`
+                    : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
+                }
               </div>
               <div class="timeline-center"><span class="timeline-point"></span></div>
               <div class="timeline-side timeline-side--right">
-                ${i % 2
-              ? `<img class="timeline-icon" src="${item.icon}">`
-              : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
-            }
+                ${
+                  i % 2
+                    ? `<img class="timeline-icon" src="${item.icon}">`
+                    : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
+                }
               </div>
             </div>
           `;
@@ -231,16 +223,28 @@ document.addEventListener("DOMContentLoaded", () => {
       if (menList) {
         menList.innerHTML = "";
         data.dresscode?.men?.forEach(
-          (i) => (menList.innerHTML += `<li>${i}</li>`)
+          (i) => (menList.innerHTML += `<li>${i}</li>`),
         );
       }
 
       if (womenList) {
         womenList.innerHTML = "";
         data.dresscode?.women?.forEach(
-          (i) => (womenList.innerHTML += `<li>${i}</li>`)
+          (i) => (womenList.innerHTML += `<li>${i}</li>`),
         );
       }
+
+      /* =====================================================
+   GRATITUDE (AGRADECIMIENTO)
+   ===================================================== */
+
+      const gratitudeTitle = document.getElementById("gratitudeTitle");
+      const gratitudeText = document.getElementById("gratitudeText");
+
+      if (gratitudeTitle)
+        gratitudeTitle.innerHTML = data.gratitude?.title || "";
+
+      if (gratitudeText) gratitudeText.innerHTML = data.gratitude?.text || "";
 
       /* =====================================================
          GALLERY

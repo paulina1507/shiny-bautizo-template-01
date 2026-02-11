@@ -52,7 +52,12 @@
 
     "text": "Llenos de fe y amor, presentamos ante Dios a nuestro hijo para recibir el Sacramento del Bautismo y te invitamos a acompañarnos en este momento tan especial.",
 
-    "icon": "assets/img/bautizo.svg"
+    "icon": "assets/img/cruz.svg"
+  },
+
+  "gratitude": {
+    "title": "Con gratitud",
+    "text": "Agradecemos a Dios y a cada uno de ustedes por acompañarnos en este día tan especial para nuestra familia."
   },
 
   "location": {
@@ -121,12 +126,18 @@
       "Pantalón de vestir",
       "Zapatos formales"
     ],
-    "women": [
-      "Vestido formal",
-      "Zapato cómodo",
-      "Colores claros o neutros"
-    ],
+    "women": ["Vestido formal", "Zapato cómodo", "Colores claros o neutros"],
     "note": "Te sugerimos un atuendo respetuoso y adecuado para la ceremonia religiosa."
+  },
+
+  "gallery": {
+    "title": "Galería",
+    "images": [
+      "assets/img/gallery1.png",
+      "assets/img/gallery2.png",
+      "assets/img/gallery3.png",
+      "assets/img/gallery4.png"
+    ]
   },
 
   "rsvp": {
@@ -136,17 +147,16 @@
     "fields": {
       "namePlaceholder": "Nombre completo",
       "attendancePlaceholder": "¿Podrás acompañarnos?",
-      "attendanceOptions": [
-        "Sí asistiré",
-        "No podré asistir"
-      ],
+      "attendanceOptions": ["Sí asistiré", "No podré asistir"],
       "messagePlaceholder": "Mensaje o bendición para Mateo",
       "buttonText": "Confirmar asistencia"
     },
 
     "assigned": {
       "passesLabel": "Pases asignados",
-      "passesValue": "2"
+      "passesValue": "2",
+      "tableLabel": "Mesa asignada",
+      "tableValue": "Mesa 5"
     },
 
     "note": "Agradecemos confirmar antes del <strong>10 de abril de 2026</strong>.",

@@ -3,14 +3,13 @@
   /* =========================
      BRAND / IDENTIDAD
      ========================= */
-  --color-primary: #111184;     /* Lavanda principal */
+  --color-primary: #3b69af;     /* Lavanda principal */
   --color-accent: #c6964d;      /* Dorado tenue (detalles finos) */
   --color-envelope: #8aadcd;
   /* =========================
      BACKGROUNDS
      ========================= */
   --bg-main: #ffffff;
-  --bg-soft: #f4f1f7;
   --bg-section: #ede8f3;
   --bg-overlay: rgba(0, 0, 0, 0.35);
 

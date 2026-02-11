@@ -1,284 +1,288 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle"></title>
 
-  <title id="pageTitle"></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/gallery.css" />
+    <link rel="stylesheet" href="assets/css/rsvp.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+  </head>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/header.css" />
-  <link rel="stylesheet" href="assets/css/hero.css" />
-  <link rel="stylesheet" href="assets/css/sections.css" />
-  <link rel="stylesheet" href="assets/css/gallery.css" />
-  <link rel="stylesheet" href="assets/css/rsvp.css" />
-  <link rel="stylesheet" href="assets/css/footer.css" />
-</head>
+  <body>
+    <!-- ================= MUSIC PLAYER ================= -->
+    <button id="musicToggle" class="music-toggle" aria-label="Música">
+      <img id="musicIcon" src="assets/img/play.svg" />
+    </button>
 
-<body>
-  <!-- ================= MUSIC PLAYER ================= -->
-  <button id="musicToggle" class="music-toggle" aria-label="Música">
-    <img id="musicIcon" src="assets/img/play.svg" />
-  </button>
+    <audio id="bgMusic" loop playsinline></audio>
 
-  <audio id="bgMusic" loop playsinline></audio>
+    <!-- ========================= HEADER ========================= -->
+    <header class="header" id="header">
+      <div class="header-container">
+        <nav class="nav nav-left" id="navLeft"></nav>
 
-  <!-- ========================= HEADER ========================= -->
-  <header class="header" id="header">
-    <div class="header-container">
-      <nav class="nav nav-left" id="navLeft"></nav>
-
-      <div class="header-logo">
-        <a href="#hero" id="headerLogo"></a>
-      </div>
-
-      <nav class="nav nav-right" id="navRight"></nav>
-
-      <button class="menu-toggle" id="menuToggle">☰</button>
-    </div>
-  </header>
-
-  <!-- ================= SOBRE ================= -->
-  <div id="envelopeOverlay" class="envelope-overlay">
-    <div class="envelope">
-      <div class="flap front"></div>
-      <div class="flap top"></div>
-      <div class="letter"></div>
-      <div id="sealButton" class="seal">
-        <img src="assets/img/sello.svg" alt="" />
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= HERO ================= -->
-  <section id="hero" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <span class="hero-pretitle" id="heroPretitle"></span>
-      <h1 class="hero-names" id="heroNames"></h1>
-      <div class="hero-divider"></div>
-      <div id="countdownTimer" class="hero-countdown"></div>
-    </div>
-
-    <div class="hero-scroll"><span></span></div>
-  </section>
-  <!-- ================= PRESENTACIÓN ================= -->
-  <section id="presentation" class="section section--framed">
-    <div class="frame-box">
-      <div class="presentation-content">
-        <h2 class="section-title reveal-title" id="presentationTitle"></h2>
-
-        <!-- PADRES -->
-        <div class="presentation-parents reveal-left" id="presentationParents">
+        <div class="header-logo">
+          <a href="#hero" id="headerLogo"></a>
         </div>
 
-        <!-- PADRINOS -->
-        <div class="presentation-parents reveal-right" id="presentationPadrinos">
+        <nav class="nav nav-right" id="navRight"></nav>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </header>
+
+    <!-- ================= SOBRE ================= -->
+    <div id="envelopeOverlay" class="envelope-overlay">
+      <div class="envelope">
+        <div class="flap front"></div>
+        <div class="flap top"></div>
+        <div class="letter"></div>
+        <div id="sealButton" class="seal">
+          <img src="assets/img/sello.svg" alt="" />
         </div>
-
-        <!-- TEXTO -->
-        <p class="presentation-text reveal-left" id="presentationText"></p>
-
-        <img id="presentationIcon" class="presentation-icon" alt="" />
       </div>
     </div>
-  </section>
 
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
 
-  <!-- ================= LUGAR ================= -->
-  <section id="location" class="section section--flowers section--soft">
-    <div class="flower flower--top"></div>
-    <div class="flower flower--bottom"></div>
-
-    <div class="container text-center">
-      <h2 class="section-title reveal-title" id="locationTitle"></h2>
-      <p class="location-subtitle reveal-left" id="locationSubtitle"></p>
-
-      <div class="location-box">
-        <p class="location-date reveal-right" id="locationDate"></p>
-        <div class="location-grid reveal-left" id="locationGrid"></div>
+      <div class="hero-content">
+        <span class="hero-pretitle" id="heroPretitle"></span>
+        <h1 class="hero-names" id="heroNames"></h1>
+        <div class="hero-divider"></div>
+        <div id="countdownTimer" class="hero-countdown"></div>
       </div>
-    </div>
-  </section>
 
-  <!-- ================= PROGRAMA ================= -->
-  <section id="timeline" class="section section--framed">
-    <div class="frame-box">
-      <h2 class="section-title reveal-title" id="timelineTitle"></h2>
+      <div class="hero-scroll"><span></span></div>
+    </section>
+    <!-- ================= PRESENTACIÓN ================= -->
+    <section id="presentation" class="section section--framed">
+      <div class="frame-box">
+        <div class="presentation-content">
+          <h2 class="section-title reveal-title" id="presentationTitle"></h2>
 
-      <div class="timeline-vertical" id="timelineContainer">
-        <div class="timeline-line"></div>
+          <!-- PADRES -->
+          <div
+            class="presentation-parents reveal-left"
+            id="presentationParents"
+          ></div>
+
+          <!-- PADRINOS -->
+          <div
+            class="presentation-parents reveal-right"
+            id="presentationPadrinos"
+          ></div>
+
+          <!-- TEXTO -->
+          <p class="presentation-text reveal-left" id="presentationText"></p>
+
+          <img id="presentationIcon" class="presentation-icon" alt="" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= REGALOS ================= -->
-  <section id="gifts" class="section section--flowers section--soft">
-    <div class="flower flower--top"></div>
-    <div class="flower flower--bottom"></div>
+    <!-- ================= LUGAR ================= -->
+    <section id="location" class="section section--flowers section--soft">
+      <div class="flower flower--top"></div>
+      <div class="flower flower--bottom"></div>
 
-    <div class="container text-center">
-      <h2 class="section-title reveal-title" id="giftsTitle"></h2>
-      <div class="divider"></div>
+      <div class="container text-center">
+        <h2 class="section-title reveal-title" id="locationTitle"></h2>
+        <p class="location-subtitle reveal-left" id="locationSubtitle"></p>
 
-      <div class="gifts-box">
-        <p class="gifts-text reveal-left" id="giftsText"></p>
-        <div class="gifts-options reveal-right" id="giftsOptions"></div>
+        <div class="location-box">
+          <p class="location-date reveal-right" id="locationDate"></p>
+          <div class="location-grid reveal-left" id="locationGrid"></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= VESTIMENTA ================= -->
-  <section id="dresscode" class="section section--framed">
-    <div class="frame-box">
-      <div class="dresscode-content">
-        <h2 class="section-title reveal-title" id="dresscodeTitle"></h2>
+    <!-- ================= PROGRAMA ================= -->
+    <section id="timeline" class="section section--framed">
+      <div class="frame-box">
+        <h2 class="section-title reveal-title" id="timelineTitle"></h2>
+
+        <div class="timeline-vertical" id="timelineContainer">
+          <div class="timeline-line"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= Agradecimiento ================= -->
+    <section class="section section--flowers section--soft section--verse">
+      <div class="flower flower--top"></div>
+      <div class="flower flower--bottom"></div>
+      <div class="container text-center">
+        <h2 class="section-title reveal-title" id="gratitudeTitle"></h2>
         <div class="divider"></div>
+        <p class="gratitude-text reveal-left" id="gratitudeText"></p>
+        <img src="assets/img/paloma.svg" class="verse-dove" alt="" />
+      </div>
+    </section>
 
-        <img id="dresscodeImage" class="dresscode-illustration" alt="" />
+    <!-- ================= VESTIMENTA ================= -->
+    <section id="dresscode" class="section section--framed">
+      <div class="frame-box">
+        <div class="dresscode-content">
+          <h2 class="section-title reveal-title" id="dresscodeTitle"></h2>
+          <div class="divider"></div>
 
-        <h3 class="dresscode-type reveal-right" id="dresscodeType"></h3>
+          <img id="dresscodeImage" class="dresscode-illustration" alt="" />
 
-        <div class="dresscode-grid reveal-left">
-          <div class="dresscode-col">
-            <h4 id="dresscodeMenTitle"></h4>
-            <ul id="dresscodeMen"></ul>
+          <h3 class="dresscode-type reveal-right" id="dresscodeType"></h3>
+
+          <div class="dresscode-grid reveal-left">
+            <div class="dresscode-col">
+              <h4 id="dresscodeMenTitle"></h4>
+              <ul id="dresscodeMen"></ul>
+            </div>
+
+            <div class="dresscode-col reveal-right">
+              <h4 id="dresscodeWomenTitle"></h4>
+              <ul id="dresscodeWomen"></ul>
+            </div>
           </div>
 
-          <div class="dresscode-col reveal-right">
-            <h4 id="dresscodeWomenTitle"></h4>
-            <ul id="dresscodeWomen"></ul>
-          </div>
+          <p class="dresscode-note" id="dresscodeNote"></p>
         </div>
-
-        <p class="dresscode-note" id="dresscodeNote"></p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= GALERÍA ================= -->
-  <section id="gallery" class="section section--flowers section--soft">
-    <div class="flower flower--top"></div>
-    <div class="flower flower--bottom"></div>
+    <!-- ================= GALERÍA ================= -->
+    <section id="gallery" class="section section--flowers section--soft">
+      <div class="flower flower--top"></div>
+      <div class="flower flower--bottom"></div>
 
-    <div class="container">
-      <h2 class="section-title reveal-title text-center" id="galleryTitle"></h2>
-      <div class="divider"></div>
-
-      <div class="gallery-box">
-        <div class="gallery-grid" id="galleryGrid"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= RSVP ================= -->
-  <section id="rsvp" class="section section--framed">
-    <div class="frame-box">
-      <div class="rsvp-content text-center">
-        <!-- TÍTULO -->
-        <h2 class="section-title reveal-title" id="rsvpTitle"></h2>
+      <div class="container">
+        <h2
+          class="section-title reveal-title text-center"
+          id="galleryTitle"
+        ></h2>
         <div class="divider"></div>
 
-        <!-- INTRO -->
-        <p class="rsvp-intro reveal-left" id="rsvpIntro"></p>
+        <div class="gallery-box">
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </div>
+    </section>
 
-        <!-- =================
+    <!-- ================= RSVP ================= -->
+    <section id="rsvp" class="section section--accent">
+      <div class="container">
+        <div class="rsvp-content text-center">
+          <!-- TÍTULO -->
+          <h2 class="section-title reveal-title" id="rsvpTitle"></h2>
+          <div class="divider"></div>
+
+          <!-- INTRO -->
+          <p class="rsvp-intro reveal-left" id="rsvpIntro"></p>
+
+          <!-- =================
            FORMULARIO RSVP
            ================= -->
-        <form class="rsvp-form" id="rsvpForm">
-          <!-- NOMBRE (PRELLENADO DESDE PANEL) -->
-          <div class="rsvp-field">
-            <label>Invitado</label>
-            <input type="text" id="rsvpName" />
-            <small class="rsvp-helper">
-              Este nombre fue asignado por los anfitriones
-            </small>
-          </div>
+          <form class="rsvp-form" id="rsvpForm">
+            <!-- NOMBRE (PRELLENADO DESDE PANEL) -->
+            <div class="rsvp-field">
+              <label>Invitado</label>
+              <input type="text" id="rsvpName" />
+              <small class="rsvp-helper">
+                Este nombre fue asignado por los anfitriones
+              </small>
+            </div>
 
-          <!-- ASISTENCIA -->
-          <div class="rsvp-field">
-            <label>¿Podrás acompañarnos?</label>
-            <select id="rsvpAttendance" required></select>
-          </div>
+            <!-- ASISTENCIA -->
+            <div class="rsvp-field">
+              <label>¿Podrás acompañarnos?</label>
+              <select id="rsvpAttendance" required></select>
+            </div>
 
-          <!-- MENSAJE -->
-          <div class="rsvp-field optional">
-            <label>Mensaje para los novios (opcional)</label>
-            <textarea id="rsvpMessage"></textarea>
-          </div>
+            <!-- MENSAJE -->
+            <div class="rsvp-field optional">
+              <label>Mensaje para los novios (opcional)</label>
+              <textarea id="rsvpMessage"></textarea>
+            </div>
 
-          <!-- BOTÓN -->
-          <button type="submit" class="btn btn-primary rsvp-submit" id="rsvpButton"></button>
-        </form>
+            <!-- BOTÓN -->
+            <button
+              type="submit"
+              class="btn btn-primary rsvp-submit"
+              id="rsvpButton"
+            ></button>
+          </form>
 
-        <!-- =================
+          <!-- =================
            TICKET DIGITAL
            ================= -->
-        <div class="rsvp-extra hidden rsvp-ticket" id="rsvpExtra">
-          <!-- HEADER -->
-          <div class="ticket-header">
-            <span class="ticket-status">Acceso confirmado</span>
-            <span class="ticket-name" id="rsvpGuestName"></span>
-          </div>
-
-          <!-- INFO PASES / MESA -->
-          <div class="ticket-body ticket-badges">
-            <div class="ticket-badge" id="rsvpPassesBlock">
-              <span class="badge-icon">🎫</span>
-              <span class="badge-label">Pases</span>
-              <span class="badge-value" id="rsvpPassesText"></span>
+          <div class="rsvp-extra hidden rsvp-ticket" id="rsvpExtra">
+            <!-- HEADER -->
+            <div class="ticket-header">
+              <span class="ticket-status">Acceso confirmado</span>
+              <span class="ticket-name" id="rsvpGuestName"></span>
             </div>
 
-            <div class="ticket-badge" id="rsvpTableBlock">
-              <span class="badge-icon">🪑</span>
-              <span class="badge-label">Mesa</span>
-              <span class="badge-value" id="rsvpTableText"></span>
-            </div>
-          </div>
+            <!-- INFO PASES / MESA -->
+            <div class="ticket-body ticket-badges">
+              <div class="ticket-badge" id="rsvpPassesBlock">
+                <span class="badge-icon">🎫</span>
+                <span class="badge-label">Pases</span>
+                <span class="badge-value" id="rsvpPassesText"></span>
+              </div>
 
-          <!-- QR -->
-          <!--  <div class="ticket-qr">
+              <div class="ticket-badge" id="rsvpTableBlock">
+                <span class="badge-icon">🪑</span>
+                <span class="badge-label">Mesa</span>
+                <span class="badge-value" id="rsvpTableText"></span>
+              </div>
+            </div>
+
+            <!-- QR -->
+            <!--  <div class="ticket-qr">
               <canvas id="rsvpQr"></canvas>
               <span class="qr-label">
                 Presenta este código el día del evento
               </span>
             </div> -->
+          </div>
+
+          <!-- NOTA -->
+          <p class="rsvp-note" id="rsvpNote"></p>
+
+          <!-- MENSAJE FINAL -->
+          <div class="rsvp-success hidden" id="rsvpSuccess"></div>
         </div>
-
-        <!-- NOTA -->
-        <p class="rsvp-note" id="rsvpNote"></p>
-
-        <!-- MENSAJE FINAL -->
-        <div class="rsvp-success hidden" id="rsvpSuccess"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="container text-center">
-      <p id="footerNames"></p>
-      <small id="footerCredits"></small>
-    </div>
-  </footer>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p id="footerNames"></p>
+        <small id="footerCredits"></small>
+      </div>
+    </footer>
 
-  <!-- JS -->
-  <script src="assets/js/data-loader.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/countdown.js"></script>
-  <script src="assets/js/gallery.js"></script>
-  <script src="js/rsvp.js" defer></script>
-</body>
-
+    <!-- JS -->
+    <script src="assets/js/data-loader.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script src="js/rsvp.js" defer></script>
+  </body>
 </html>
