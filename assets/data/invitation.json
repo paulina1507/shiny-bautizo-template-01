@@ -2,75 +2,87 @@
   "meta": {
     "pageTitle": "Bautizo de Mateo"
   },
-
   "site": {
     "couple": "Bautizo de Mateo"
   },
-
   "nav": {
     "left": [
-      { "label": "Inicio", "href": "#hero" },
-      { "label": "Presentación", "href": "#presentation" },
-      { "label": "Ceremonia", "href": "#location" },
-      { "label": "Programa", "href": "#timeline" }
+      {
+        "label": "Inicio",
+        "href": "#hero"
+      },
+      {
+        "label": "Presentación",
+        "href": "#presentation"
+      },
+      {
+        "label": "Ceremonia",
+        "href": "#location"
+      }
     ],
     "right": [
-      { "label": "Celebración", "href": "#celebration" },
-      { "label": "Vestimenta", "href": "#dresscode" },
-      { "label": "Confirmación", "href": "#rsvp" }
+      {
+        "label": "Programa",
+        "href": "#timeline"
+      },
+      {
+        "label": "Vestimenta",
+        "href": "#dresscode"
+      },
+      {
+        "label": "Confirmación",
+        "href": "#rsvp"
+      }
     ]
   },
-
   "music": {
     "src": "assets/audio/cancion.mp3",
     "autoplay": true
   },
-
   "hero": {
     "pretitle": "Santo Bautismo",
     "names": "Mateo",
     "date": "2026-04-20T12:00:00",
     "background": "assets/img/hero.png"
   },
-
   "presentation": {
     "title": "Con la gracia de Dios",
-
     "parents": [
       {
-        "names": ["David García", "Lizbeth Armenta"],
+        "names": [
+          "David García",
+          "Lizbeth Armenta"
+        ],
         "note": "Papás"
       }
     ],
-
     "padrinos": [
       {
-        "names": ["Carlos Ramírez", "María Fernanda López"],
+        "names": [
+          "Carlos Ramírez",
+          "María Fernanda López"
+        ],
         "note": "Padrinos de Bautizo"
       }
     ],
-
     "text": "Llenos de fe y amor, presentamos ante Dios a nuestro hijo para recibir el Sacramento del Bautismo y te invitamos a acompañarnos en este momento tan especial.",
-
     "icon": "assets/img/cruz.svg"
   },
-
   "gratitude": {
     "title": "Con gratitud",
     "text": "Agradecemos a Dios y a cada uno de ustedes por acompañarnos en este día tan especial para nuestra familia."
   },
-
   "location": {
     "title": "Ceremonia y celebración",
     "subtitle": "Fecha y ubicación",
-    "dateText": "20 · Abril · 2026<br><span>Monclova, Coah.</span>",
+    "dateText": "20 · Abril · 2026",
     "places": [
       {
         "title": "Ceremonia Religiosa",
         "time": "12:00 Hrs.",
         "image": "assets/img/ceremonia.png",
         "place": "Parroquia San José",
-        "address": "Calle Iglesia 123<br>Monclova, Coah.",
+        "address": "Calle Iglesia 123",
         "map": "https://www.google.com.mx/maps"
       },
       {
@@ -78,12 +90,11 @@
         "time": "14:00 Hrs.",
         "image": "assets/img/recepcion.png",
         "place": "Salón Jardín Los Ángeles",
-        "address": "Av. Principal 456<br>Monclova, Coah.",
+        "address": "Av. Principal 456",
         "map": "https://www.google.com.mx/maps"
       }
     ]
   },
-
   "timeline": {
     "title": "Programa",
     "items": [
@@ -109,60 +120,53 @@
       }
     ]
   },
-
   "celebration": {
     "title": "Un día de fe y amor",
     "text": "Acompáñanos a celebrar este momento tan importante en la vida espiritual de Mateo."
   },
-
   "dresscode": {
     "title": "Código de Vestimenta",
     "type": "Formal",
     "image": "assets/img/9.svg",
-    "menTitle": "Ellos",
-    "womenTitle": "Ellas",
-    "men": [
-      "Camisa formal o guayabera",
-      "Pantalón de vestir",
-      "Zapatos formales"
-    ],
-    "women": ["Vestido formal", "Zapato cómodo", "Colores claros o neutros"],
-    "note": "Te sugerimos un atuendo respetuoso y adecuado para la ceremonia religiosa."
+    "menTitle": "",
+    "womenTitle": "",
+    "men": [],
+    "women": [],
+    "note": "Te invitamos a asistir con un atuendo formal y respetuoso, acorde a la ceremonia religiosa."
   },
-
   "gallery": {
     "title": "Galería",
     "images": [
       "assets/img/gallery1.png",
       "assets/img/gallery2.png",
       "assets/img/gallery3.png",
-      "assets/img/gallery4.png"
+      "assets/img/gallery1.png",
+      "assets/img/gallery2.png",
+      "assets/img/gallery3.png"
     ]
   },
-
   "rsvp": {
     "title": "Confirmación de Asistencia",
     "intro": "Será un honor contar con tu presencia.",
-
     "fields": {
       "namePlaceholder": "Nombre completo",
       "attendancePlaceholder": "¿Podrás acompañarnos?",
-      "attendanceOptions": ["Sí asistiré", "No podré asistir"],
+      "attendanceOptions": [
+        "Sí asistiré",
+        "No podré asistir"
+      ],
       "messagePlaceholder": "Mensaje o bendición para Mateo",
       "buttonText": "Confirmar asistencia"
     },
-
     "assigned": {
       "passesLabel": "Pases asignados",
       "passesValue": "2",
       "tableLabel": "Mesa asignada",
       "tableValue": "Mesa 5"
     },
-
     "note": "Agradecemos confirmar antes del <strong>10 de abril de 2026</strong>.",
     "success": "¡Gracias por confirmar! Que Dios te bendiga."
   },
-
   "footer": {
     "names": "Bautizo de Mateo",
     "credits": "Diseñado con amor por Shiny Maker Events"
